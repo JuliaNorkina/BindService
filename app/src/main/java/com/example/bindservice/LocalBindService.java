@@ -13,12 +13,11 @@ public class LocalBindService extends Service {
     return binder;
     }
 
+    public Integer calculateFactorial(Integer number){
+        return MathUtil.calculateFactorial(number);
+    }
     class MyBinder extends Binder{
-        public Integer calculateFactorial(Integer number){
-            return MathUtil.calculateFactorial(number);
-        }
-
-        public LocalBindService getetService() {
+        public LocalBindService getService() {
             return LocalBindService.this;
         }
     }
